@@ -1,63 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Money-Bank</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Monthly Expenses</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
-    <section class="main">
-        <h1 class="header">Money-Bank</h1>
+    <!-- error massage -->
+    <div class="error-box" id="error-box">
+        <button id="close"><i class="fa-solid fa-xmark"></i></button>
+    <div class="error" id="error1">
+        <p>Sorry Sir Your Income is :<span id="have"></span> 
+        But You Spend <span id="spend"></span> &amp; Put corrent Information</p>
+    </div>
+    <div class="error" id="error2">
+        <p>You Have Only :<span id="youhave"></span>
+        On <span id="afterb"></span> &amp; Please Put Corrent Number</p>
+    </div>
+   
+</div>
 
-        <div class="container">
-            <div class="box">
-                <img src="images/money.jpg" alt="">
+    <section class="main">
+        <h1 class="heading-title">Money-Bank</h1>
+
+        <div class="box-container">
+            <div class="box box1"></div>  
+            <div class="box box2">
+                <h1>Income</h1>    
+            <div class="form">
+                <p>income</p>
+                <input type="text" id="income" placeholder="Your Income : $ ">   
             </div>
-            <div class="box-2">
-                <h1>Income</h1>
-                <br>
-                <div class="form">
-                    <p>Income: <input type="text" id="Income" value=""></p>
-                </div>
-                <br>
-                <h1>Expenses</h1>
-                <br>
-                <div class="form">
-                    <p>Food: <input type="text" id="food" value=""></p>
-                </div>
-                <br>
-                <div class="form">
-                    <p>Rent: <input type="text" id="Rent" value=""></p>
-                </div>
-                <br>
-                <div class="form">
-                    <p>Others: <input type="text" id="Others" value=""></p> 
-                </div>
-                <br>
-                <br>
-                <button type="button" id="">calculate</button>
-                <br>
-                <br>
-                <h1>Total Expences: <span id="">$00</span></h1>
-                <br>
-                <h1>Balance: <span id="">$00</span></h1>
-                <br>
-                <br>
-                <div class="save">
-                    <p>Save: <input type="number" value=""> % <button type="button" id="">Save</button></p>
-                    
-                </div>
-                <br>
-                <h1>Saving Ammount: <span>$00</span></h1>
-                <br>
-                <h1>Remaining Balance: <span>$00</span></h1>
+            <div class="section-2">
+            <h1>Expenses</h1>
+            <div class="form">
+               <p>Food</p>
+               <input type="text" id="food" placeholder="Food : $">
+            </div>
+            <div class="form">
+               <p>Rent </p>
+               <input type="text" id="rent" placeholder="Rent : $">
+            </div>
+            <div class="form">
+               <p>Cloths</p>
+               <input type="text" id="clothses" placeholder="Clothses : $">
+           </div>
+
+           </div>
+            <button id="calculate" class="calculate">Calculate</button>
+            <div class="content">
+                <h3>Total Expences: <span id="totoal-exprese">0</span></h3>
+            <h3>Balance:<span id="balance">0</span></h3>
+            </div>
+
+            <div class="save">
+                <p>Save</p>
+                <input type="text" id="persent" placeholder="Persent %"> <h1>%</h1> <button id="save">Save</button>
+            </div>
+
+            <p>Save Ammount:<span id="save-amount">0</span></p> 
+            <div class="space-10px"></div>
+            <p>Remaining Balance:<span id="rem-balance"> 0</span></p>
             </div>
         </div>
     </section>
+    <script src="./js/app.js"></script>
 
-
-    <script src="js/app.js"></script>
 </body>
 </html>
